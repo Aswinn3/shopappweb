@@ -1,55 +1,102 @@
-.productCard{
-    width: 350px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .productCard img{
-    max-width: 100%;
-    height: 250px;
-    margin: 10px 0px;
-  }
-  
-  .productCard .name{
-    margin: 10px 0px;
-  }
-  
-  .productCard p{
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
-  .productCard .action{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0px;
-  }
-  
-  .productCard button{
-    border: 0px;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #FFFFFF;
-    background-color: #1C59AE;
-    padding: 7px 10px;
-    cursor: pointer;
-    max-width: 150px;
-  }
-  
-  .productCard button:hover{
-    background-color: #103f80;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-  .productCard .remove{
-    background-color: #ac0d14;
-  }
-  
-  .productCard .remove:hover{
-    background-color: #8e090f;
-  }
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa, #e0f2f1);
+  margin: 0;
+}
+
+.home {
+  padding: 50px 20px;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #f3fefc, #d9f5f2);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #004d40;
+  margin-bottom: 40px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productCard {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.productCard img {
+  max-width: 100%;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  border-radius: 12px;
+}
+
+.productCard .name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 12px 0;
+  color: #37474f;
+}
+
+.productCard p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.productCard .action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.productCard button {
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #00bfa5;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 191, 165, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.productCard button:hover {
+  background-color: #009e85;
+  transform: scale(1.05);
+}
+
+.productCard .remove {
+  background-color: #ff5252;
+  box-shadow: 0 0 8px rgba(255, 82, 82, 0.4);
+}
+
+.productCard .remove:hover {
+  background-color: #e53935;
+}

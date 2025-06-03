@@ -1,45 +1,85 @@
-.cartCard{
-    display: flex;    
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border-radius: 5px;
-    margin: 30px 10px;
-    padding: 10px;
+.cartCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cartCard img {
+  width: 120px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 20px;
+  background-color: #ffffff;
+}
+
+.cartCard .productName {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+  color: #37474f;
+  margin: 10px 0;
+}
+
+.cartCard .productPrice {
+  width: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #00796b;
+  text-align: right;
+  margin: 10px 0;
+}
+
+.cartCard button {
+  border: none;
+  background-color: #ff5252;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 6px rgba(255, 82, 82, 0.3);
+}
+
+.cartCard button:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 680px) {
+  .cartCard {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .cartCard img{
-    width: 150px;
-    height: 100px;
-    margin-right: 10px;
+
+  .cartCard img {
+    display: none;
   }
-  
-  .cartCard .productName{
-    width: 350px;
-    margin-right: 10px;
+
+  .cartCard .productPrice {
+    width: auto;
+    text-align: center;
+    margin: 5px 0;
   }
-  
-  .cartCard .productPrice{
-    width: 100px;
-    margin-right: 10px;
+
+  .cartCard button {
+    width: 100%;
+    margin-top: 10px;
   }
-  
-  .cartCard button{
-    border: 0px;
-    background-color: #ac0d14;
-    color: #FFFFFF;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .cartCard button:hover{
-    background-color: #8e090f;
-  }
-  
-  
-  @media screen and (max-width: 680px) {
-    .cartCard img{
-        display: none;
-    }
-  }
+}

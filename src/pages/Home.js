@@ -1,5 +1,6 @@
 import { ProductCard } from "../components/ProductCard"
 import { useTitle } from "../hooks/useTitle"
+
 export const Home = () => {
   useTitle("Home");
 
@@ -13,10 +14,12 @@ export const Home = () => {
   ]
 
   return (
-    <main>
-      <section className="products">
+    <main className="home">
+      <h2 className="page-title">Explore Our Products</h2>
+      <section className="products-grid">
         { products.map((product) => (
-        <ProductCard key={product.id} product={product}/>) )}
+          <ProductCard key={product.id} product={product} />
+        )) }
       </section>
     </main>
   )

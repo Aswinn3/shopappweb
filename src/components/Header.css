@@ -1,40 +1,83 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    border-bottom: 1px solid #EEEEEE;
-    font-size: 18px;
-    padding: 0px 10px;
+/* Header.css */
+
+.siteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 63px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.2);
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.siteLogo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: #1C59AE;
+  text-decoration: none;
+}
+
+.siteLogo img {
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+.siteNav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.siteNavLink {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.siteNavLink:hover {
+  background-color: #e1e9f0;
+}
+
+.siteNavLink.active {
+  background-color: #d0e1ff;
+  font-weight: 600;
+}
+
+.cartSummary {
+  font-weight: 600;
+  background-color: #1C59AE;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cartSummary:hover {
+  background-color: #103f80;
+}
+
+@media screen and (max-width: 680px) {
+  .siteNav {
+    display: none;
   }
-  
-  .logo{
-    display: flex;
-    align-items: center;
+
+  .cartSummary {
+    padding: 6px 12px;
+    font-size: 14px;
   }
-  .logo img{
-    max-width: 40px;
-    margin-right: 5px;
-  }
-  
-  .navigation .link{
-    padding: 10px;
-  }
-  
-  .navigation .link.active{
-    background-color: #EEEEEE;
-    border-radius: 5px;
-  }
-  
-  .items{
-    font-weight: 500;
-    min-width: 70px;
-  }
-  
-  @media screen and (max-width: 680px) {
-    .navigation{
-        display: none;
-    }
-  }
+}
